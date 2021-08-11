@@ -21,7 +21,7 @@ class _ThemeSettingPageState extends State<ThemeSettingPage> {
   ];
 
   _toggleTheme(color) {
-    Provider.of<ThemeProvider>(context, listen: false,).setPrimaryColor(color);
+    Provider.of<ThemeProvider>(context, listen: false,).primaryColor = color;
   }
 
   @override

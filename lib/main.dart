@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_framework/provider/localization_provider.dart';
-import 'package:flutter_framework/provider/theme_provider.dart';
-import 'package:flutter_framework/provider/user_provider.dart';
+import 'package:flutter_framework/provider/providers.dart';
 import 'package:flutter_framework/service/index.dart';
 import 'package:provider/provider.dart';
 import 'app.dart';
@@ -14,14 +12,7 @@ void main() {
 
   runApp(
     MultiProvider(
-      providers: [
-        ChangeNotifierProvider(
-          lazy: true,
-          create: (context) => LocalizationProvider(context),
-        ),
-        ChangeNotifierProvider<ThemeProvider>.value(value: ThemeProvider()),
-        ChangeNotifierProvider<UserProvider>.value(value: UserProvider()),
-      ],
+      providers: providers,
       child: App(),
     ),
   );

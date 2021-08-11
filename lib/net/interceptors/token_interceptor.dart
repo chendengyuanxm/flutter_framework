@@ -9,5 +9,6 @@ class TokenInterceptor extends InterceptorsWrapper {
       options.headers["Authorization"] = token;
       options.queryParameters.putIfAbsent("token", () => token);
     }
+    super.onRequest(options, handler);
   }
 }
