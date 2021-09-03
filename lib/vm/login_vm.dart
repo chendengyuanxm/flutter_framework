@@ -1,4 +1,5 @@
 import 'package:flutter_framework/repository/user_repository.dart';
+import 'package:flutter_framework/util/index.dart';
 import 'package:flutter_framework/vm/viewmodel_helper.dart';
 import 'package:stacked/stacked.dart';
 
@@ -17,7 +18,7 @@ class LoginVM extends BaseViewModel with ViewModelHelper {
 
   login() {
     execute(userRepository.login(_userName!, _password!), onSuccess: (result) {
-
+      showToast('登录成功!');
     });
   }
 }

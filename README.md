@@ -4,7 +4,7 @@
 
 ## Getting Started
 
-```aidl
+```
 #### version
 flutter: 2.0.5
 dart: 2.12.3
