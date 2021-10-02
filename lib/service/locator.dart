@@ -1,5 +1,4 @@
 import 'package:get_it/get_it.dart';
-import 'local_database_service.dart';
 import 'navigation_service.dart';
 import 'push_service.dart';
 
